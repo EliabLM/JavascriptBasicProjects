@@ -5,19 +5,18 @@ const color2 = document.querySelector(".color2");
 const body = document.getElementById("gradient");
 const btn = document.getElementById('btn');
 
-function setGradient() {
+const setGradient = () => {
 	body.style.background = `linear-gradient(to right, ${color1.value}, ${color2.value})`;
 	css.textContent = body.style.background;
 }
 
 
-function getRandomNumber() {
+const getRandomNumber = () => {
 	randomNumber = Math.floor(Math.random()*hex.length);
-	console.log(randomNumber);
 	return randomNumber;
 }
 
-function colorPicker() {
+const colorPicker = () => {
 	let hexColor = "#";
 	let hexColor2 = "#";
 	for (let i = 0; i <6; i++) {
